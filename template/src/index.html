@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Tuan Cenima's</title>
+    <!-- plugins:css -->
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/mdi/css/materialdesignicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/css/vendor.bundle.base.css"
+    />
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/jvectormap/jquery-jvectormap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/flag-icon-css/css/flag-icon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/owl-carousel-2/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/owl-carousel-2/owl.theme.default.min.css"
+    />
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="../assets/images/hi.png" />
+    <!-- select -->
+    <!-- css bootstrap -->
+    <link
+      rel="stylesheet"
+      href="../assets/css/bootstrap-5.0.2-dist/css/bootstrap.min.css"
+    />
+    <!-- css custom -->
+    <link rel="stylesheet" href="/template/assets/css/custom/style-chair.css" />
+    <link rel="stylesheet" href="../assets/css/custom/ticket-style.css" />
+  </head>
+  <body ng-app="myApp">
+    <div class="container-scroller app-theme-gray">
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <div
+          class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top"
+        >
+          <a class="sidebar-brand brand-logo" href="#sell">Tuan Cinema's</a>
+          <a class="sidebar-brand brand-logo-mini" href="#sell">T</a>
+        </div>
+        <ul class="nav">
+          <li class="nav-item profile">
+            <div class="profile-desc">
+              <div class="profile-pic">
+                <div class="count-indicator">
+                  <img
+                    class="img-xs rounded-circle"
+                    src="../assets/images/faces/face15.jpg"
+                    alt=""
+                  />
+                  <span class="count bg-success"></span>
+                </div>
+                <div class="profile-name">
+                  <h5 class="mb-0 font-weight-normal" style="color: black">
+                    Thanh Ne
+                  </h5>
+                  <span>Admin</span>
+                </div>
+              </div>
+              <span href="#" id="profile-dropdown" data-toggle="dropdown"
+                ><i class="mdi mdi-dots-vertical"></i
+              ></span>
+              <div
+                class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list"
+                aria-labelledby="profile-dropdown"
+              >
+                <a href="#" class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-settings text-primary"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1 text-small">
+                      Account settings
+                    </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-onepassword text-info"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1 text-small">
+                      Change Password
+                    </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item nav-category">
+            <span class="nav-link">Function</span>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="#sell">
+              <span class="menu-icon">
+                <i class="mdi mdi-cart"></i>
+              </span>
+              <span class="menu-title">Sell</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="#statistical">
+              <span class="menu-icon">
+                <i class="mdi mdi-chart-bar"></i>
+              </span>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <span
+              style="bottom: 0px"
+              class="nav-link"
+              data-toggle="collapse"
+              href="#ui-basic"
+              aria-expanded="false"
+              aria-controls="ui-basic"
+            >
+              <span class="menu-icon">
+                <i class="mdi mdi-laptop"></i>
+              </span>
+              <span class="menu-title">Film</span>
+              <i class="menu-arrow"></i>
+            </span>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="#movie">Movie</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#show-time">Show_time</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#producer">Producer</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#genre">Genre</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#main-actor">Main Actor</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#directors">Directors</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#trailer">Trailer</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#image">Image</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item menu-items">
+            <span
+              class="nav-link"
+              data-toggle="collapse"
+              href="#product"
+              aria-expanded="false"
+              aria-controls="product"
+            >
+              <span class="menu-icon">
+                <i class="mdi mdi-playlist-play"></i>
+              </span>
+              <span class="menu-title">Product</span>
+              <i class="menu-arrow"></i>
+            </span>
+            <div class="collapse" id="product">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="#ticket">Ticket</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#chair">Chair</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#room">Room</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="#order">
+              <span class="menu-icon">
+                <i class="mdi mdi-file-document-box"></i>
+              </span>
+              <span class="menu-title">Order</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <span
+              class="nav-link"
+              data-toggle="collapse"
+              href="#food"
+              aria-expanded="false"
+              aria-controls="food"
+            >
+              <span class="menu-icon">
+                <i class="mdi mdi-food"></i>
+              </span>
+              <span class="menu-title">Food_ComBo</span>
+              <i class="menu-arrow"></i>
+            </span>
+            <div class="collapse" id="food">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="#food">Food</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#combo">ComBo</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item menu-items">
+            <span
+              class="nav-link"
+              data-toggle="collapse"
+              href="#account"
+              aria-expanded="false"
+              aria-controls="account"
+            >
+              <span class="menu-icon">
+                <i class="mdi mdi-account"></i>
+              </span>
+              <span class="menu-title">Account</span>
+              <i class="menu-arrow"></i>
+            </span>
+            <div class="collapse" id="account">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="#staff">Staff</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#client">Client</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar p-0 fixed-top d-flex flex-row">
+          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+            <button
+              class="navbar-toggler navbar-toggler align-self-center"
+              type="button"
+              data-toggle="minimize"
+            >
+              <span class="mdi mdi-menu"></span>
+            </button>
+            <div class="navbar-nav navbar-nav-center" style="margin-left: 50px">
+              <marquee
+                style="
+                  width: 500px;
+                  font-family: 'Times New Roman', Times, serif;
+                  font-size: 20px;
+                "
+                ><i
+                  >KHI KHÔNG CÓ ĐƯỢC THỨ MÀ TA YÊU THÌ HÃY YÊU THỨ MÀ TA CÓ.</i
+                ></marquee
+              >
+            </div>
+            <ul class="navbar-nav navbar-nav-right">
+              <li class="nav-item nav-settings d-none d-lg-block">
+                <span class="nav-link" href="#">
+                  <i class="mdi mdi-heart"></i>
+                </span>
+              </li>
+              <li class="nav-item nav-settings d-none d-lg-block">
+                <span class="nav-link" href="#">
+                  <i class="mdi mdi-view-grid"></i>
+                </span>
+              </li>
+              <li class="nav-item dropdown border-left">
+                <span
+                  class="nav-link count-indicator dropdown-toggle"
+                  id="messageDropdown"
+                  href="#"
+                  data-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="mdi mdi-email"></i>
+                  <span class="count bg-success"></span>
+                </span>
+                <div
+                  class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                  aria-labelledby="messageDropdown"
+                >
+                  <h6 class="p-3 mb-0">Messages</h6>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <img
+                        src="../assets/images/faces/face4.jpg"
+                        alt="image"
+                        class="rounded-circle profile-pic"
+                      />
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject ellipsis mb-1">
+                        Mark send you a message
+                      </p>
+                      <p class="text-muted mb-0">1 Minutes ago</p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <img
+                        src="../assets/images/faces/face2.jpg"
+                        alt="image"
+                        class="rounded-circle profile-pic"
+                      />
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject ellipsis mb-1">
+                        Cregh send you a message
+                      </p>
+                      <p class="text-muted mb-0">15 Minutes ago</p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <img
+                        src="../assets/images/faces/face3.jpg"
+                        alt="image"
+                        class="rounded-circle profile-pic"
+                      />
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject ellipsis mb-1">
+                        Profile picture updated
+                      </p>
+                      <p class="text-muted mb-0">18 Minutes ago</p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <p class="p-3 mb-0 text-center">4 new messages</p>
+                </div>
+              </li>
+              <li class="nav-item dropdown border-left">
+                <span
+                  class="nav-link count-indicator dropdown-toggle"
+                  id="notificationDropdown"
+                  href="#"
+                  data-toggle="dropdown"
+                >
+                  <i class="mdi mdi-bell"></i>
+                  <span class="count bg-danger"></span>
+                </span>
+                <div
+                  class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                  aria-labelledby="notificationDropdown"
+                >
+                  <h6 class="p-3 mb-0">Notifications</h6>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-calendar text-success"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject mb-1">Event today</p>
+                      <p class="text-muted ellipsis mb-0">
+                        Just a reminder that you have an event today
+                      </p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-settings text-danger"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject mb-1">Settings</p>
+                      <p class="text-muted ellipsis mb-0">Update dashboard</p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-link-variant text-warning"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject mb-1">Launch Admin</p>
+                      <p class="text-muted ellipsis mb-0">New admin wow!</p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <p class="p-3 mb-0 text-center">See all notifications</p>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" id="profileDropdown" data-toggle="dropdown">
+                  <div class="navbar-profile">
+                    <img
+                      class="img-xs rounded-circle"
+                      src="../assets/images/faces/face15.jpg"
+                      alt=""
+                    />
+                    <p class="mb-0 d-none d-sm-block navbar-profile-name">
+                      Thanh Ne
+                    </p>
+                    <i class="mdi mdi-menu-down d-none d-sm-block"></i>
+                  </div>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                  aria-labelledby="profileDropdown"
+                >
+                  <h6 class="p-3 mb-0">Profile</h6>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-settings text-success"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject mb-1">Settings</p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-logout text-danger"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject mb-1" href="#">Log out</p>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                </div>
+              </li>
+            </ul>
+            <button
+              class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+              type="button"
+              data-toggle="offcanvas"
+            >
+              <span class="mdi mdi-format-line-spacing"></span>
+            </button>
+          </div>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div ng-view></div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer">
+            <div
+              class="d-sm-flex justify-content-center justify-content-sm-between"
+            >
+              <span
+                class="text-muted d-block text-center text-sm-left d-sm-inline-block"
+                style="font-weight: bold"
+                >Contact 403 Forbeden: 0988542315</span
+              >
+              <span
+                class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"
+              ></span>
+              <span class="menu-icon">
+                <i class="mdi mdi-facebook"></i>
+              </span>
+              <span class="menu-icon">
+                <i class="mdi mdi-instagram"></i>
+              </span>
+              <span class="menu-icon">
+                <i class="mdi mdi-google"></i>
+              </span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+
+    <!-- bootstrap -->
+    <script src="../assets/css/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <!-- angular -->
+    <script src="../lib/angular.js"></script>
+
+    <!-- websocket -->
+    <script src="../node_modules/angular-websocket/dist/angular-websocket.js"></script>
+    <!-- <script src="../node_modules/stompjs/lib/stomp.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+
+    <script src="../node_modules/sockjs-client/dist/sockjs.js"></script>
+    <!--angular-route -->
+    <script src="../lib/angular-route.js"></script>
+
+    <!-- cua giao dien -->
+    <script src="../assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="../assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="../assets/vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="../assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
+    <script src="../assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="../assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+    <script src="../assets/js/off-canvas.js"></script>
+    <script src="../assets/js/hoverable-collapse.js"></script>
+    <script src="../assets/js/misc.js"></script>
+    <script src="../assets/js/settings.js"></script>
+    <script src="../assets/js/todolist.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+    <script src="/template/assets/js/select2.js"></script>
+
+    <!-- api -->
+    <script src="../api/api.js"></script>
+
+    <!-- controller -->
+    <script src="./controller/actor-controller.js"></script>
+    <script src="../src/controller/foodController.js"></script>
+    <script src="../src/controller/comboController.js"></script>
+    <script src="../src/controller/chair-controller.js"></script>
+    <script src="../src/controller/ticket-controller.js"></script>
+
+    <!-- route cua du an -->
+    <script src="../src/router.js"></script>
+  </body>
+</html>

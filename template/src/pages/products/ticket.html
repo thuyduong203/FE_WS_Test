@@ -1,0 +1,126 @@
+<div class="ticket-style">
+  <h2>Ticket</h2>
+  <div class="col-7">
+    <section class="search-and-user">
+      <form>
+        <input
+          type="search"
+          ng-model="inputSearch"
+          placeholder="Search Pages..."
+          style="font-size: 15px"
+        />
+        <button type="submit" aria-label="submit form">
+          <span class="mdi mdi-magnify"></span>
+        </button>
+      </form>
+    </section>
+  </div>
+  <section class="page-content">
+    <div class="col-md-3">
+      <label for="cbbTrangThaiFilter" class="form-label"
+        ><b>Trạng thái:</b></label
+      >
+      <select
+        ng-model="cbbStatusTicketFilter"
+        id="cbbTrangThaiFilter"
+        class="form-select"
+        ng-change="filterTicketByStatus(cbbStatusTicketFilter)"
+        ng-init="cbbStatusTicketFilter = '3'"
+      >
+        <option value="1">Printed</option>
+        <option value="2">Unprinted</option>
+        <option value="3">All</option>
+        <option value="4">Khac</option>
+      </select>
+      <br />
+    </div>
+    <!-- table ticket -->
+    <div class="table_table">
+      <!-- <h4>Ticket</h4> -->
+      <div class="table-responsive table-rounded">
+        <table
+          class="table table-borderless table-striped table-hover table-full-width bg-white"
+        >
+          <thead>
+            <tr>
+              <th class="text-center">STT</th>
+              <th class="text-center">Hoa don</th>
+              <th class="text-center">Khach hang</th>
+              <th class="text-center">Nhan vien</th>
+              <th class="text-center">Ma ve</th>
+              <th class="text-center">Phòng</th>
+              <th class="text-center">Loai ghe - Ghe</th>
+              <th class="text-center">Phim</th>
+              <th class="text-center">Giờ chiếu</th>
+              <th class="text-center">Gia</th>
+              <th class="text-center">Ngay tao</th>
+              <th class="text-center">Trang thai</th>
+              <th class="text-center"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="ticket in tickets">
+              <td class="text-center">{{$index + 1}}</td>
+              <td class="text-center">{{ticket.ordersCode}}</td>
+              <th class="text-center">{{ticket.customerCode}}</th>
+              <th class="text-center">{{ticket.employeeCode}}</th>
+              <th class="text-center">{{ticket.code}}</th>
+              <th class="text-center">{{ticket.room}}</th>
+              <th class="text-center">
+                {{ticket.chairTypeName}} - {{ticket.chairName}}
+              </th>
+              <th class="text-center">{{ticket.movie}}</th>
+              <th class="text-center">{{ticket.time}}</th>
+              <th class="text-center">{{ticket.price}}</th>
+              <th class="text-center">{{ticket.createdTime}}</th>
+              <th class="text-center">
+                <span ng-if="ticket.status == 1">printed</span>
+                <!-- <span ng-if="ticket.status == 2"
+                  ><button
+                    type="button"
+                    class="btn btn-danger"
+                    ng-click="updateStatusTicket(ticket.id)"
+                  >
+                    {{ticket.id}}
+                  </button></span
+                > -->
+                <span ng-if="ticket.status == 2">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    ng-click="confirmUpdate(ticket.id)"
+                  >
+                    {{ticket.id}}
+                  </button>
+                </span>
+
+                <span ng-if="ticket.status == 3">ko xác định</span>
+              </th>
+
+              <td class="text-center">
+                <a style="color: aliceblue"><i class="mdi mdi-eye"></i></a>
+                <a style="color: aquamarine"
+                  ><i class="mdi mdi-square-edit-outline"></i
+                ></a>
+                <a style="color: red"><i class="mdi mdi-delete"></i></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li
+          class="page-item"
+          ng-repeat="page in pages"
+          ng-class="{active: currentPage === page}"
+        >
+          <a class="page-link" href="" ng-click="goToPage(page)"
+            >{{page + 1}}</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </section>
+</div>

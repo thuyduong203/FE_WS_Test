@@ -1,0 +1,302 @@
+<section class="page-content">
+  <div class="row">
+    <div class="col-7">
+      <section class="search-and-user">
+        <form>
+          <input
+            type="search"
+            placeholder="Search Pages..."
+            style="font-size: 15px"
+          />
+          <button type="submit" aria-label="submit form">
+            <span class="mdi mdi-magnify"></span>
+          </button>
+        </form>
+      </section>
+    </div>
+
+    <div class="col-2">
+      <form
+        id="app-cover"
+        style="position: relative; z-index: 9999; margin-bottom: 20px"
+      >
+        <div id="select-box">
+          <input type="checkbox" id="options-view-button" />
+          <div id="select-button" class="brd" style="border-radius: 10px">
+            <div id="selected-value">
+              <span style="font-size: 15px">Search to :</span>
+            </div>
+            <div id="chevrons">
+              <i class="mdi mdi-chevron-up"></i>
+              <i class="mdi mdi-chevron-down"></i>
+            </div>
+          </div>
+          <div id="options">
+            <div class="option">
+              <input
+                class="s-c top"
+                type="radio"
+                name="platform"
+                value="name"
+              />
+              <input
+                class="s-c bottom"
+                type="radio"
+                name="platform"
+                value="name"
+              />
+              <span class="label">Name</span>
+              <span class="opt-val">Name</span>
+            </div>
+            <div class="option">
+              <input
+                class="s-c top"
+                type="radio"
+                name="platform"
+                value="Price"
+              />
+              <input
+                class="s-c bottom"
+                type="radio"
+                name="platform"
+                value="Price"
+              />
+              <span class="label">Price</span>
+              <span class="opt-val">Price</span>
+            </div>
+            <div id="option-bg"></div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-3">
+      <!-- HTML !-->
+      <button class="button-74" role="button" ng-click="test(3)">
+        +ADD MOVIE
+      </button>
+    </div>
+  </div>
+
+  <section class="grid">
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <label
+              style="margin-top: 10px; font-weight: bold; margin-left: 10px"
+              >Sắp xếp:</label
+            >
+            <form id="app-cover" style="margin-top: 40px; margin-left: 20px">
+              <div id="select-box" style="width: 300px">
+                <input
+                  type="checkbox"
+                  id="options-view-button"
+                  style="width: 300px"
+                />
+                <div id="select-button" class="brd" style="border-radius: 10px">
+                  <div id="selected-value">
+                    <span style="font-size: 15px">Ngày ra mắt mới nhất :</span>
+                  </div>
+                  <div id="chevrons">
+                    <i class="mdi mdi-chevron-up"></i>
+                    <i class="mdi mdi-chevron-down"></i>
+                  </div>
+                </div>
+                <div id="options" style="width: 300px">
+                  <div class="option">
+                    <input
+                      class="s-c top"
+                      type="radio"
+                      name="platform"
+                      value="name"
+                      width="300px"
+                    />
+                    <input
+                      class="s-c bottom"
+                      type="radio"
+                      name="platform"
+                      value="name"
+                    />
+                    <span class="label">Name</span>
+                    <span class="opt-val">Name</span>
+                  </div>
+                  <div class="option">
+                    <input
+                      class="s-c top"
+                      type="radio"
+                      name="platform"
+                      value="trangThai"
+                    />
+                    <input
+                      class="s-c bottom"
+                      type="radio"
+                      name="platform"
+                      value="trangThai"
+                    />
+                    <span class="label">TrangThai</span>
+                    <span class="opt-val">TrangThai</span>
+                  </div>
+                  <div class="option">
+                    <input
+                      class="s-c top"
+                      type="radio"
+                      name="platform"
+                      value="trangThai1"
+                    />
+                    <input
+                      class="s-c bottom"
+                      type="radio"
+                      name="platform"
+                      value="trangThai1"
+                    />
+                    <span class="label">TrangThai1</span>
+                    <span class="opt-val">TrangThai1</span>
+                  </div>
+                  <div id="option-bg"></div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <label
+              style="margin-top: 10px; font-weight: bold; margin-left: 10px"
+              >Trạng thái :</label
+            >
+
+            <form id="app-cover" style="margin-top: 40px; margin-left: 20px">
+              <div id="select-box" style="width: 300px">
+                <input
+                  type="checkbox"
+                  id="options-view-button"
+                  style="width: 300px"
+                />
+                <div id="select-button" class="brd" style="border-radius: 10px">
+                  <div id="selected-value">
+                    <span style="font-size: 15px">Tất Cả :</span>
+                  </div>
+                  <div id="chevrons">
+                    <i class="mdi mdi-chevron-up"></i>
+                    <i class="mdi mdi-chevron-down"></i>
+                  </div>
+                </div>
+                <div id="options" style="width: 300px">
+                  <div class="option">
+                    <input
+                      class="s-c top"
+                      type="radio"
+                      name="platform"
+                      value="name"
+                      width="300px"
+                    />
+                    <input
+                      class="s-c bottom"
+                      type="radio"
+                      name="platform"
+                      value="name"
+                    />
+                    <span class="label">Name</span>
+                    <span class="opt-val">Name</span>
+                  </div>
+                  <div class="option">
+                    <input
+                      class="s-c top"
+                      type="radio"
+                      name="platform"
+                      value="trangThai"
+                    />
+                    <input
+                      class="s-c bottom"
+                      type="radio"
+                      name="platform"
+                      value="trangThai"
+                    />
+                    <span class="label">TrangThai</span>
+                    <span class="opt-val">TrangThai</span>
+                  </div>
+                  <div class="option">
+                    <input
+                      class="s-c top"
+                      type="radio"
+                      name="platform"
+                      value="trangThai1"
+                    />
+                    <input
+                      class="s-c bottom"
+                      type="radio"
+                      name="platform"
+                      value="trangThai1"
+                    />
+                    <span class="label">TrangThai1</span>
+                    <span class="opt-val">TrangThai1</span>
+                  </div>
+                  <div id="option-bg"></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <div class="table_table">
+    <h4>List food</h4>
+    <div class="table-responsive table-rounded">
+      <table
+        class="table table-borderless table-striped table-hover table-full-width bg-white"
+      >
+        <thead>
+          <tr>
+            <th class="text-center">Type food</th>
+            <th class="text-center">Name</th>
+            <th class="text-center">Price</th>
+            <th class="text-center">Quantity</th>
+            <th class="text-center">Unit</th>
+            <th class="text-center">Create by</th>
+            <th class="text-center">Create time</th>
+            <th class="text-center">Update by</th>
+            <th class="text-center">Update time</th>
+            <th class="text-center">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="f in lstFood">
+            <td class="text-center">{{f.snackType.name}}</td>
+            <td class="text-center">{{f.name}}</td>
+            <td class="text-center">{{f.price}}</td>
+            <td class="text-center">{{f.quantity}}</td>
+            <td class="text-center">{{f.unit}}</td>
+            <th class="text-center">{{f.createdBy}}</th>
+            <th class="text-center">{{f.createdTime}}</th>
+            <th class="text-center">{{f.updatedBy}}</th>
+            <th class="text-center">{{f.updatedTime}}</th>
+            <td class="text-center">
+              <a style="color: aliceblue"><i class="mdi mdi-eye"></i></a>
+              <a style="color: aquamarine"
+                ><i class="mdi mdi-square-edit-outline"></i
+              ></a>
+              <a style="color: red"><i class="mdi mdi-delete"></i></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</section>
